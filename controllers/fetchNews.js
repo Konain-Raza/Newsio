@@ -1,16 +1,22 @@
 const googleNewsAPI = require("google-news-json");
 const serializeDescription = (description) => {
   try {
-    // Decode URL encoding and clean HTML <a> tags
-    let decodedString = JSON.parse(
-      '"' + description.replace(/\"/g, '\\"') + '"'
-    );
-    return decodedString;
+    // Decode Unicode escape sequences and remove HTML tags
+    return description
+    .replace(/\\u([\dA-F]{4})/gi, (match, grp) => String.fromCharCode(parseInt(grp, 16)))  // Decode Unicode
+    .replace(/<\/?[^>]+(>|$)/g, "")  // Remove HTML tags
+    .replace(/&nbsp;/g, '')  // Replace &nbsp; with space
+    .replace(/&lt;/g, '<')  // Decode HTML entities
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'");
   } catch (err) {
     console.error("Error serializing description:", err);
     return "Error processing description";
   }
 };
+
 
 // Function to fetch news and format it
 const fetchTopNews = async (topic) => {
