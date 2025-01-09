@@ -7,6 +7,8 @@ const port = 3000;
 app.use(cors());
 
 const htmlContent = `
+<div style="max-width: 100%; padding: 5px; box-sizing: border-box;">
+
 <h1>🌍 Newsio API: Stay Updated with the Latest News! 📰</h1>
 <p>Your personal news genie is here to bring you the top stories from around the world! 🌎✨</p>
 
@@ -26,8 +28,8 @@ const htmlContent = `
   "news": [
     {
       "title": "Climate change: What role is it playing in the California fires - BBC",
-      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5hN2dMWHMxd1E1cmlhaEJ0elA0a3hFYlM3NlRuNFJ4UWdYeEFuMXk1YjFtZm93X3BxanFnQ3FKRlpqTGRDRGdNYzhjT093VDVQbkdqUjlIdGJUOTRD0gFiQVVfeXFMTzI3RWg4cnlCM2VvVHFjeDRvanpPZl9GZmY2SW5xeG1jTC1YVURFcmEwUmJVVGtXalFFSkJjZ3RtUU85a2xPdzFET3lXTHFCaVEwZ1ZqSkhXZWdzMXFwTzBURHc?oc=5",
-      "description": "Climate change: What role is it playing in the California fires, LA wildfires in maps, Visual explainer, Southern California Wildfires Spread. 🌍🔥",
+      "link": "https://news.google.com",
+      "description": "Climate change: What role is it playing in the California fires, Southern California Wildfires Spread. 🌍🔥",
       "publishedAt": "Wed, 08 Jan 2025 14:55:04 GMT",
       "source": "BBC"
     },
@@ -44,7 +46,8 @@ const htmlContent = `
 
 <p>Start fetching news and stay ahead of the curve with Newsio! 📰✨</p>
 
-<p>Made with 💖 by Konain Raza</p>
+<h3>Made with 💖 by Konain Raza</h3>
+</div>
 `;
 
 app.get("/", (req, res) => {
