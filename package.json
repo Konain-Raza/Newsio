@@ -11,9 +11,12 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "apollo-server": "^3.13.0",
+    "cheerio": "^1.0.0",
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "google-news-json": "^2.1.0",
+    "graphql": "^16.10.0",
     "nodemon": "^3.1.9"
   }
 }
