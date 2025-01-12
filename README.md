@@ -99,9 +99,6 @@ Ready to see the magic? 🚀 You can test the API using any **GraphQL client** (
 
 We believe that **news is powerful**, and the more people that join our mission to make information accessible, the better! 🌍
 
-Feel free to **fork the repo**, submit **pull requests**, or **report issues**. Together, we can make NewsIO even better! 🚀
-
-
 ## ✨ **Made with ❤️ by Konain Raza**
 
 Every piece of code in NewsIO is crafted with love and passion by **Konain Raza**. From my keyboard to the world, with **care** and **magic**. 🧑‍💻💖
